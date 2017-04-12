@@ -2,27 +2,27 @@ class Users::RegistrationsController < Devise::RegistrationsController
   before_action :configure_sign_up_params, only: [:create]
   before_action :configure_account_update_params, only: [:update]
 
-  # GET /resource/sign_up
+  # GET /users/sign_up
   def new
     super
   end
 
-  # POST /resource
+  # POST /users
   def create
     super
   end
 
-  # GET /resource/edit
+  # GET /users/edit
   def edit
     super
   end
 
-  # PUT /resource
+  # PUT /users
   def update
     super
   end
 
-  # DELETE /resource
+  # DELETE /users
   # def destroy
   #   super
   # end
@@ -36,7 +36,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  # protected
+  protected
 
   # If you have extra params to permit, append them to the sanitizer.
   # def configure_sign_up_params
