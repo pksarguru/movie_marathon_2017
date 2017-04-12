@@ -5,5 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable
 
   has_many :summaries
+  has_many :summarized_movies, through: :summaries, source: :movie
   has_many :votes
+
 end
