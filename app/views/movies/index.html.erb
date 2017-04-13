@@ -15,9 +15,12 @@
             <th>Name</th>
             <th>Score</th>
           </tr>
-          <tr>
-
-          </tr>
+            <% @users.each do |user| %>
+            <tr>
+              <td><%= user.username.capitalize %></td>
+              <td><%= user.score %></td>
+            </tr>
+            <% end %>
         </table>
       </div>
     </div>
