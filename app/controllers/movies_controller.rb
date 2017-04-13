@@ -5,9 +5,11 @@ class MoviesController < ApplicationController
 
   def show
     if Movie.find(params["id"]).in?(current_user.summarized_movies)
-      print "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+
+      @movie = Movie.find_by(id: params[:id])
     else
-      print "NOPENOPENOPENOPENOPENOPENOPE"
+      redirect_to movies_path
     end
+
   end
 end
