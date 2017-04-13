@@ -1,6 +1,10 @@
 class MoviesController < ApplicationController
   def index
-    @movies = Movie.all
+    if user_signed_in?
+      @movies = Movie.all
+    else
+      redirect_to new_user_registration_path
+    end
   end
 
   def show
