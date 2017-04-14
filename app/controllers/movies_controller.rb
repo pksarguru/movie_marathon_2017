@@ -10,7 +10,8 @@ class MoviesController < ApplicationController
 
   def show
     @movie = Movie.find_by(id: params[:id])
-    
-    if user_signed_in?
+
+    @authors = @movie.author_ids
+
   end
 end
