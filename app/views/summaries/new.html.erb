@@ -1,0 +1,7 @@
+<h1><%= @movie.title %></h1>
+
+<%= form_for :summary do |f| %>
+  <h3>Submit a one sentence synopsis below:</h3>
+  <%= f.text_area :text %><br />
+  <%= f.submit %>
+<% end %>
